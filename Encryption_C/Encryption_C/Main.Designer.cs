@@ -37,6 +37,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            button4 = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -87,28 +88,42 @@
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(384, 282);
+            button2.Location = new Point(401, 282);
             button2.Name = "button2";
             button2.Size = new Size(150, 150);
             button2.TabIndex = 3;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
             button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
             button3.BackgroundImageLayout = ImageLayout.Stretch;
             button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(569, 282);
+            button3.Location = new Point(585, 282);
             button3.Name = "button3";
             button3.Size = new Size(150, 150);
             button3.TabIndex = 4;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
+            button4.BackgroundImageLayout = ImageLayout.Stretch;
+            button4.ForeColor = SystemColors.ButtonHighlight;
+            button4.Location = new Point(340, 106);
+            button4.Name = "button4";
+            button4.Size = new Size(150, 150);
+            button4.TabIndex = 5;
+            button4.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(982, 553);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -135,5 +150,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button button4;
     }
 }

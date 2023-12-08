@@ -113,7 +113,7 @@ namespace Encryption_C
                         text += encryptedText;
 
                         // Если достигнут конец файла, прерываем считывание.
-                        if (temp == null) break; 
+                        if (temp == null) break;
                     }
                 }
 

@@ -17,3 +17,5 @@ D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\ref\En
 D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Caesar.resources
 D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Main.resources
 D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Properties.Resources.resources
+D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Morse.resources
+D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Transposition.resources

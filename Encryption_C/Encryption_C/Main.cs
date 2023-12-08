@@ -18,5 +18,20 @@ namespace Encryption_C
         {
             Application.Exit();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Morse morse = new Morse();
+            morse.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Transposition trans = new Transposition();
+            trans.ShowDialog();
+        }
+
     }
 }

@@ -47,6 +47,7 @@
             textBox5 = new TextBox();
             button2 = new Button();
             openFileDialog1 = new OpenFileDialog();
+            saveFileDialog1 = new SaveFileDialog();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -276,5 +277,6 @@
         private Button button5;
         private OpenFileDialog openFileDialog1;
         private Button button6;
+        private SaveFileDialog saveFileDialog1;
     }
 }

@@ -50,36 +50,48 @@ namespace Encryption_C
                     input += input[i];
 
                 string result = "";
-
-                for (int i = 0; i < input.Length; i += key.Length)
+                try
                 {
-                    char[] transposition = new char[key.Length];
+                    for (int i = 0; i < input.Length; i += key.Length)
+                    {
+                        char[] transposition = new char[key.Length];
 
-                    for (int j = 0; j < key.Length; j++)
-                        transposition[key[j] - 1] = input[i + j]; // Сделать исключение 
+                        for (int j = 0; j < key.Length; j++)
+                            transposition[key[j] - 1] = input[i + j];
 
-                    for (int j = 0; j < key.Length; j++)
-                        result += transposition[j];
+                        for (int j = 0; j < key.Length; j++)
+                            result += transposition[j];
+                    }
                 }
-
+                catch (System.IndexOutOfRangeException)
+                {
+                    MessageBox.Show("Введите правильно ключ");
+                }
                 return result;
             }
 
             public string Decrypt(string input)
             {
                 string result = "";
-
-                for (int i = 0; i < input.Length; i += key.Length)
+                try
                 {
-                    char[] transposition = new char[key.Length];
 
-                    for (int j = 0; j < key.Length; j++)
-                        transposition[j] = input[i + key[j] - 1];
 
-                    for (int j = 0; j < key.Length; j++)
-                        result += transposition[j];
+                    for (int i = 0; i < input.Length; i += key.Length)
+                    {
+                        char[] transposition = new char[key.Length];
+
+                        for (int j = 0; j < key.Length; j++)
+                            transposition[j] = input[i + key[j] - 1];
+
+                        for (int j = 0; j < key.Length; j++)
+                            result += transposition[j];
+                    }
                 }
-
+                catch (System.IndexOutOfRangeException)
+                {
+                    MessageBox.Show("Введите правильно ключ");
+                }
                 return result;
             }
 
@@ -106,6 +118,31 @@ namespace Encryption_C
             main.Show();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = saveFileDialog1.FileName;
+            // сохраняем текст в файл
+            string str = textBox3.Text + "\n" + textBox2.Text;
+            System.IO.File.WriteAllText(filename, str);
+            MessageBox.Show("Файл сохранен");
+        }
 
+        // Файлом
+        private void But_save_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = saveFileDialog1.FileName;
+            // сохраняем текст в файл
+            
+            System.IO.File.WriteAllText(filename, textBox4.Text);
+            System.IO.File.WriteAllText(filename, "\n");
+            System.IO.File.WriteAllText(filename, textBox5.Text);
+            MessageBox.Show("Файл сохранен");
+        }
     }
 }

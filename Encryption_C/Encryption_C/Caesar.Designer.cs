@@ -31,6 +31,7 @@
             tabControl1 = new TabControl();
             tabPage3 = new TabPage();
             tabPage1 = new TabPage();
+            button7 = new Button();
             button3 = new Button();
             textBox3 = new TextBox();
             label2 = new Label();
@@ -42,7 +43,6 @@
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
-            textBox4 = new TextBox();
             label4 = new Label();
             textBox5 = new TextBox();
             button2 = new Button();
@@ -76,6 +76,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(button7);
             tabPage1.Controls.Add(button3);
             tabPage1.Controls.Add(textBox3);
             tabPage1.Controls.Add(label2);
@@ -90,6 +91,16 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Текстом";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(838, 43);
+            button7.Name = "button7";
+            button7.Size = new Size(90, 28);
+            button7.TabIndex = 15;
+            button7.Text = "Скачать";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button3
             // 
@@ -158,7 +169,6 @@
             tabPage2.Controls.Add(button6);
             tabPage2.Controls.Add(button5);
             tabPage2.Controls.Add(button4);
-            tabPage2.Controls.Add(textBox4);
             tabPage2.Controls.Add(label4);
             tabPage2.Controls.Add(textBox5);
             tabPage2.Controls.Add(button2);
@@ -172,16 +182,17 @@
             // 
             // button6
             // 
-            button6.Location = new Point(771, 42);
+            button6.Location = new Point(831, 42);
             button6.Name = "button6";
-            button6.Size = new Size(150, 28);
+            button6.Size = new Size(90, 28);
             button6.TabIndex = 14;
-            button6.Text = "Скачать файл";
+            button6.Text = "Скачать";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
-            button5.Location = new Point(593, 42);
+            button5.Location = new Point(645, 42);
             button5.Name = "button5";
             button5.Size = new Size(153, 28);
             button5.TabIndex = 13;
@@ -197,14 +208,6 @@
             button4.TabIndex = 12;
             button4.Text = "Дешифрование";
             button4.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(340, 41);
-            textBox4.MaxLength = 2;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(59, 27);
-            textBox4.TabIndex = 11;
             // 
             // label4
             // 
@@ -231,10 +234,10 @@
             button2.TabIndex = 6;
             button2.Text = "Шифрование";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // openFileDialog1
             // 
+            openFileDialog1.DefaultExt = "txt";
             openFileDialog1.FileName = "openFileDialog1";
             // 
             // Caesar
@@ -268,7 +271,6 @@
         private Label label2;
         private TextBox textBox2;
         private TextBox textBox3;
-        private TextBox textBox4;
         private Label label4;
         private TextBox textBox5;
         private Button button2;
@@ -278,5 +280,6 @@
         private OpenFileDialog openFileDialog1;
         private Button button6;
         private SaveFileDialog saveFileDialog1;
+        private Button button7;
     }
 }

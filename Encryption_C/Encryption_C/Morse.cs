@@ -17,16 +17,31 @@ namespace Encryption_C
         {
             InitializeComponent();
         }
+        /*
+         * /*
+         * { ".-", "А"}, { "-...", "Б"},{ ".--", "В"},{ "--.", "Г"},
+            { ".", "Е"}, { "-..", "Д"}, { "...-", "Ж"}, { "--..", "З"},
+            { "..", "И"}, { ".---", "Й"}, { "-.-", "К"}, { ".-..", "Л"},
+            { "--", "М"}, { "-.", "Н"}, { "---", "О"}, { ".-.", "Р"},
+            { "..-.", "Ф"}, { ".--.", "П"}, { "...", "С"}, { "-", "Т"},
+            { "..-", "У"}, { "....", "Х"}, { ".--.-.", "Ъ"}, { "-.-.", "Ц"},
+            { "----", "Ш"}, { "--.-", "Щ"},{ "---.", "Ч"}, { "-.--", "Ы"},
+            { "-..-", "Ь"}, { "...-...", "Э"}, { "..--", "Ю"}, { ".-.-", "Я"},
+            { "", " "}, { ",", ","},
+         *  а, б, в, г, д, е, ё, ж, з, и, й, к, л, м, н, о, п, р, с, т, у, ф, х, ц, ч, ш, щ, ъ, ы, ь, э, ю, я
+         */
 
         // словарь Морзе-Буква
         public static Dictionary<string, string> MorseToAbc = new Dictionary<string, string>() {
-            { ".-", "A"}, { "-...", "B"},{ "-.-.", "C"},{ "-..", "D"},
-            { ".", "E"}, { "..-.", "F"}, { "--.", "G"}, { "....", "H"},
-            { "..", "I"}, { ".---", "J"}, { "-.-", "K"}, { ".-..", "L"},
-            { "--", "M"}, { "-.", "N"}, { "---", "O"}, { ".--.", "P"},
-            { "--.-", "Q"}, { ".-.", "R"}, { "...", "S"}, { "-", "T"},
-            { "..-", "U"}, { "...-", "V"}, { ".--", "W"}, { "-..-", "X"},
-            { "-.--", "Y"},{ "--..", "Z"}, { "", " "},
+            { ".-", "А"}, { "-...", "Б"},{ ".--", "В"},{ "--.", "Г"},
+            { ".", "Е"}, { "-..", "Д"}, { "...-", "Ж"}, { "--..", "З"},
+            { "..", "И"}, { ".---", "Й"}, { "-.-", "К"}, { ".-..", "Л"},
+            { "--", "М"}, { "-.", "Н"}, { "---", "О"}, { ".-.", "Р"},
+            { "..-.", "Ф"}, { ".--.", "П"}, { "...", "С"}, { "-", "Т"},
+            { "..-", "У"}, { "....", "Х"}, { ".--.-.", "Ъ"}, { "-.-.", "Ц"},
+            { "----", "Ш"}, { "--.-", "Щ"},{ "---.", "Ч"}, { "-.--", "Ы"},
+            { "-..-", "Ь"}, { "...-...", "Э"}, { "..--", "Ю"}, { ".-.-", "Я"},
+            { "", " "}, { ",", ","}, { ".", "."},
         };
 
         // словарь Буква-Морзе
@@ -38,11 +53,18 @@ namespace Encryption_C
             input = input.ToUpper();
 
             string[] encoded = new string[input.Length];
-
-            for (int i = 0; i < input.Length; i++)
+            try
             {
-                encoded[i] = AbsToMorse[input[i].ToString()] + " ";
+                for (int i = 0; i < input.Length; i++)
+                {
+                    encoded[i] = AbsToMorse[input[i].ToString()] + " ";
+                }
             }
+            catch (System.Collections.Generic.KeyNotFoundException)
+            {
+                MessageBox.Show("Поменяйте язык ввода");
+            }
+            
 
             return string.Concat(encoded);
         }
@@ -95,6 +117,28 @@ namespace Encryption_C
             {
                 textBox2.Text = word;
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = saveFileDialog1.FileName;
+            // сохраняем текст в файл
+            System.IO.File.WriteAllText(filename, textBox5.Text);
+            MessageBox.Show("Файл сохранен");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = saveFileDialog1.FileName;
+            // сохраняем текст в файл
+            System.IO.File.WriteAllText(filename, textBox2.Text);
+            MessageBox.Show("Файл сохранен");
         }
     }
 }

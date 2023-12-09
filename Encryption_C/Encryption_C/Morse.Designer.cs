@@ -46,6 +46,7 @@
             button2 = new Button();
             openFileDialog1 = new OpenFileDialog();
             saveFileDialog1 = new SaveFileDialog();
+            button7 = new Button();
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
@@ -74,6 +75,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(button7);
             tabPage2.Controls.Add(button3);
             tabPage2.Controls.Add(label2);
             tabPage2.Controls.Add(textBox2);
@@ -159,16 +161,17 @@
             // 
             // button6
             // 
-            button6.Location = new Point(775, 46);
+            button6.Location = new Point(835, 44);
             button6.Name = "button6";
-            button6.Size = new Size(150, 28);
+            button6.Size = new Size(90, 28);
             button6.TabIndex = 21;
-            button6.Text = "Скачать файл";
+            button6.Text = "Скачать";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
-            button5.Location = new Point(597, 46);
+            button5.Location = new Point(654, 44);
             button5.Name = "button5";
             button5.Size = new Size(153, 28);
             button5.TabIndex = 20;
@@ -214,6 +217,16 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // button7
+            // 
+            button7.Location = new Point(836, 46);
+            button7.Name = "button7";
+            button7.Size = new Size(90, 28);
+            button7.TabIndex = 22;
+            button7.Text = "Скачать";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
             // Morse
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -253,5 +266,6 @@
         private Button button2;
         private OpenFileDialog openFileDialog1;
         private SaveFileDialog saveFileDialog1;
+        private Button button7;
     }
 }

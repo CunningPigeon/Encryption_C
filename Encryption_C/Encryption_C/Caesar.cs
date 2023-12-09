@@ -17,8 +17,8 @@ namespace Encryption_C
         public Caesar()
         {
             InitializeComponent();
-            textBox4.Text = "1";
             textBox3.Text = "1";
+
         }
 
         private void Caesar_FormClosed(object sender, FormClosedEventArgs e)
@@ -86,20 +86,21 @@ namespace Encryption_C
             textBox2.Text = cipher.Decrypt(encryptedText, secretKey);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        /*private void button2_Click(object sender, EventArgs e)
         {
             var cipher = new CaesarCipher(); //  = textBox1.Text;      
-            var secretKey = Convert.ToInt32(textBox4.Text); // Ключ
+            // var secretKey = Convert.ToInt32(textBox4.Text); // Ключ
 
 
             string text = "";
             ///////////////////////////////
             ///СТРОКА ПУСТАЯ
             ///Возможно не запускается файл
+            ///НУЖНО ПРОЧИТАТЬ ПЕРВУЮ СТРОКУ И ЗАПИСАТЬ ЕЕ В secretKey
             ///////////////////////////////
             if ((label4.Text != "Имя файла") && (label4.Text != ""))
             {
-                using (StreamReader fs = new StreamReader("d:\\GitHub\\Encryption_C\\Encryption_C\\Encryption_C\\Properties\\file_test\\Дешифрованный текст(шифром Цезаря).txt"))
+                using (StreamReader fs = new StreamReader(label4.Text))
                 {
                     while (true)
                     {
@@ -125,7 +126,7 @@ namespace Encryption_C
                 MessageBox.Show("Файл не выбран");
             }
 
-        }
+        }*/
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -135,6 +136,32 @@ namespace Encryption_C
                 // MessageBox.Show(OPF.FileName);
                 label4.Text = OPF.FileName;
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = saveFileDialog1.FileName;
+            // сохраняем текст в файл
+            // string str = textBox3.Text + "\n" + textBox5.Text;
+            System.IO.File.WriteAllText(filename, textBox5.Text);
+            MessageBox.Show("Файл сохранен");
+        }
+
+        // Файлом
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            string filename = saveFileDialog1.FileName;
+            // сохраняем текст в файл
+            string str = textBox3.Text + "\n" + textBox2.Text;
+
+            System.IO.File.WriteAllText(filename, str);
+            MessageBox.Show("Файл сохранен");
         }
     }
 }

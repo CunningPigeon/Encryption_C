@@ -19,3 +19,4 @@ D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryp
 D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Properties.Resources.resources
 D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Morse.resources
 D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Transposition.resources
+D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Screensaver.resources

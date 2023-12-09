@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             menuStrip1 = new MenuStrip();
             менюToolStripMenuItem = new ToolStripMenuItem();
+            теорияToolStripMenuItem = new ToolStripMenuItem();
+            шифрЦезаряToolStripMenuItem = new ToolStripMenuItem();
+            транпозиционныйШифрToolStripMenuItem = new ToolStripMenuItem();
+            азбукаМорзеToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            выходToolStripMenuItem = new ToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
             panel1 = new Panel();
             button1 = new Button();
@@ -53,9 +59,49 @@
             // 
             // менюToolStripMenuItem
             // 
+            менюToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { теорияToolStripMenuItem, шифрЦезаряToolStripMenuItem, транпозиционныйШифрToolStripMenuItem, азбукаМорзеToolStripMenuItem, toolStripSeparator1, выходToolStripMenuItem });
             менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             менюToolStripMenuItem.Size = new Size(65, 24);
             менюToolStripMenuItem.Text = "Меню";
+            // 
+            // теорияToolStripMenuItem
+            // 
+            теорияToolStripMenuItem.Name = "теорияToolStripMenuItem";
+            теорияToolStripMenuItem.Size = new Size(269, 26);
+            теорияToolStripMenuItem.Text = "Теория";
+            // 
+            // шифрЦезаряToolStripMenuItem
+            // 
+            шифрЦезаряToolStripMenuItem.Name = "шифрЦезаряToolStripMenuItem";
+            шифрЦезаряToolStripMenuItem.Size = new Size(269, 26);
+            шифрЦезаряToolStripMenuItem.Text = "Шифр Цезаря";
+            шифрЦезаряToolStripMenuItem.Click += button1_Click;
+            // 
+            // транпозиционныйШифрToolStripMenuItem
+            // 
+            транпозиционныйШифрToolStripMenuItem.Name = "транпозиционныйШифрToolStripMenuItem";
+            транпозиционныйШифрToolStripMenuItem.Size = new Size(269, 26);
+            транпозиционныйШифрToolStripMenuItem.Text = "Транпозиционный шифр";
+            транпозиционныйШифрToolStripMenuItem.Click += button2_Click;
+            // 
+            // азбукаМорзеToolStripMenuItem
+            // 
+            азбукаМорзеToolStripMenuItem.Name = "азбукаМорзеToolStripMenuItem";
+            азбукаМорзеToolStripMenuItem.Size = new Size(269, 26);
+            азбукаМорзеToolStripMenuItem.Text = "Азбука Морзе";
+            азбукаМорзеToolStripMenuItem.Click += button3_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(266, 6);
+            // 
+            // выходToolStripMenuItem
+            // 
+            выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            выходToolStripMenuItem.Size = new Size(269, 26);
+            выходToolStripMenuItem.Text = "Выход";
+            выходToolStripMenuItem.Click += выходToolStripMenuItem_Click;
             // 
             // contextMenuStrip1
             // 
@@ -122,6 +168,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(982, 553);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -151,5 +198,11 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private ToolStripMenuItem теорияToolStripMenuItem;
+        private ToolStripMenuItem шифрЦезаряToolStripMenuItem;
+        private ToolStripMenuItem транпозиционныйШифрToolStripMenuItem;
+        private ToolStripMenuItem азбукаМорзеToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem выходToolStripMenuItem;
     }
 }

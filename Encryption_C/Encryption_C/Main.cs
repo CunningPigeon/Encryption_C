@@ -33,5 +33,9 @@ namespace Encryption_C
             trans.ShowDialog();
         }
 
+        private void ‚˚ıÓ‰ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

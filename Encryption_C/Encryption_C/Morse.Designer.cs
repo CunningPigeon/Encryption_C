@@ -31,6 +31,7 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
+            button7 = new Button();
             button3 = new Button();
             label2 = new Label();
             textBox2 = new TextBox();
@@ -46,7 +47,6 @@
             button2 = new Button();
             openFileDialog1 = new OpenFileDialog();
             saveFileDialog1 = new SaveFileDialog();
-            button7 = new Button();
             tabControl1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
@@ -89,6 +89,16 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Текстом";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(836, 46);
+            button7.Name = "button7";
+            button7.Size = new Size(90, 28);
+            button7.TabIndex = 22;
+            button7.Text = "Скачать";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button3
             // 
@@ -177,6 +187,7 @@
             button5.TabIndex = 20;
             button5.Text = "Загрузить файл";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -212,20 +223,11 @@
             button2.TabIndex = 15;
             button2.Text = "Шифрование";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // button7
-            // 
-            button7.Location = new Point(836, 46);
-            button7.Name = "button7";
-            button7.Size = new Size(90, 28);
-            button7.TabIndex = 22;
-            button7.Text = "Скачать";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
             // 
             // Morse
             // 

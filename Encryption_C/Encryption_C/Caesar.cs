@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Encryption_C
 {
@@ -86,11 +87,15 @@ namespace Encryption_C
             textBox2.Text = cipher.Decrypt(encryptedText, secretKey);
         }
 
+        StreamReader sr;
         /*private void button2_Click(object sender, EventArgs e)
         {
-            var cipher = new CaesarCipher(); //  = textBox1.Text;      
+            var cipher = new CaesarCipher();
             // var secretKey = Convert.ToInt32(textBox4.Text); // Ключ
-
+            string filename = openFileDialog1.FileName;
+            label3.Text = filename.ToString();
+            //sr = new StreamReader(filename);
+            var secretKey = Convert.ToInt32(sr.ReadLine()); // Ключ
 
             string text = "";
             ///////////////////////////////
@@ -100,25 +105,17 @@ namespace Encryption_C
             ///////////////////////////////
             if ((label4.Text != "Имя файла") && (label4.Text != ""))
             {
-                using (StreamReader fs = new StreamReader(label4.Text))
+
+                while (sr != null) // конець файла - значение null
                 {
-                    while (true)
-                    {
-                        // Читаем строку из файла во временную переменную.
-                        string temp = fs.ReadLine();
-
-                        // var message = temp; // Текст для шифрования
-                        var encryptedText = cipher.Encrypt(temp, secretKey);
-
-                        // Пишем считанную строку в итоговую переменную.
-                        text += encryptedText;
-
-                        // Если достигнут конец файла, прерываем считывание.
-                        if (temp == null) break;
-                    }
+                    // Прочитать следующую строку
+                    string s = sr.ReadLine();
+                    text += s;
                 }
 
-                // Выводим на экран.
+                // 4. Закрыть файл
+                sr.Close();
+
                 textBox5.Text = text;
             }
             else
@@ -136,6 +133,12 @@ namespace Encryption_C
                 // MessageBox.Show(OPF.FileName);
                 label4.Text = OPF.FileName;
             }
+
+            // получаем выбранный файл
+            // string filename = openFileDialog1.FileName;
+            // читаем файл в строку
+            // string fileText = System.IO.File.ReadAllText(filename);
+            // textBox1.Text = fileText;
         }
 
         private void button6_Click(object sender, EventArgs e)

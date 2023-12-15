@@ -48,6 +48,7 @@
             button2 = new Button();
             openFileDialog1 = new OpenFileDialog();
             saveFileDialog1 = new SaveFileDialog();
+            label3 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -166,6 +167,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(label3);
             tabPage2.Controls.Add(button6);
             tabPage2.Controls.Add(button5);
             tabPage2.Controls.Add(button4);
@@ -234,11 +236,21 @@
             button2.TabIndex = 6;
             button2.Text = "Шифрование";
             button2.UseVisualStyleBackColor = true;
+
             // 
             // openFileDialog1
             // 
             openFileDialog1.DefaultExt = "txt";
             openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(195, 265);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 15;
+            label3.Text = "label3";
             // 
             // Caesar
             // 
@@ -281,5 +293,6 @@
         private Button button6;
         private SaveFileDialog saveFileDialog1;
         private Button button7;
+        private Label label3;
     }
 }

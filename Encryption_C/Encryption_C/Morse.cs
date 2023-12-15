@@ -64,7 +64,7 @@ namespace Encryption_C
             {
                 MessageBox.Show("Поменяйте язык ввода");
             }
-            
+
 
             return string.Concat(encoded);
         }
@@ -139,6 +139,26 @@ namespace Encryption_C
             // сохраняем текст в файл
             System.IO.File.WriteAllText(filename, textBox2.Text);
             MessageBox.Show("Файл сохранен");
+        }
+
+        // Открытие файла
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            MessageBox.Show("Файл открыт");
+        }
+
+        //Шифрование файлом
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // получаем выбранный файл
+            string filename = openFileDialog1.FileName;
+            // читаем файл в строку
+            string fileText = System.IO.File.ReadAllText(filename);
+            label4.Text = fileText;
+            string morse = ToMorse(fileText);
+            textBox5.Text = morse;
         }
     }
 }

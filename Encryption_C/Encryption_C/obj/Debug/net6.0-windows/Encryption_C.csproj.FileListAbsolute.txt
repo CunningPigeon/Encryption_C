@@ -20,3 +20,24 @@ D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryp
 D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Morse.resources
 D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Transposition.resources
 D:\GitHub\Encryption_C\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Screensaver.resources
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\bin\Debug\net6.0-windows\Encryption_C.exe
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\bin\Debug\net6.0-windows\Encryption_C.deps.json
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\bin\Debug\net6.0-windows\Encryption_C.runtimeconfig.json
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\bin\Debug\net6.0-windows\Encryption_C.dll
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\bin\Debug\net6.0-windows\Encryption_C.pdb
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Caesar.resources
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Main.resources
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Morse.resources
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Properties.Resources.resources
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Screensaver.resources
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.Transposition.resources
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.csproj.GenerateResource.cache
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.GeneratedMSBuildEditorConfig.editorconfig
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.AssemblyInfoInputs.cache
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.AssemblyInfo.cs
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.csproj.CoreCompileInputs.cache
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.dll
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\refint\Encryption_C.dll
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.pdb
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\Encryption_C.genruntimeconfig.cache
+D:\Рабочий стол\Учебная папка\Encryption_C\Encryption_C\obj\Debug\net6.0-windows\ref\Encryption_C.dll

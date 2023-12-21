@@ -59,5 +59,15 @@ namespace Encryption_C.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap МенюФон {
+            get {
+                object obj = ResourceManager.GetObject("МенюФон", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

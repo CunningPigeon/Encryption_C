@@ -166,5 +166,6 @@ namespace Encryption_C
             System.IO.File.WriteAllText(filename, str);
             MessageBox.Show("Файл сохранен");
         }
+
     }
 }

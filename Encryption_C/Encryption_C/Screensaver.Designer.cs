@@ -42,22 +42,24 @@
             // progressBar1
             // 
             progressBar1.BackColor = SystemColors.WindowText;
-            progressBar1.Location = new Point(4, 245);
+            progressBar1.Location = new Point(27, 198);
+            progressBar1.Margin = new Padding(3, 2, 3, 2);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(627, 36);
+            progressBar1.Size = new Size(549, 27);
             progressBar1.TabIndex = 0;
             progressBar1.Visible = false;
             // 
             // Screensaver
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(634, 286);
+            ClientSize = new Size(620, 250);
             Controls.Add(progressBar1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Screensaver";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Screensaver";

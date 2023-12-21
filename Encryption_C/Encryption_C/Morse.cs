@@ -160,5 +160,7 @@ namespace Encryption_C
             string morse = ToMorse(fileText);
             textBox5.Text = morse;
         }
+
+
     }
 }

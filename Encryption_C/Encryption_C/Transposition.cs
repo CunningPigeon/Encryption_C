@@ -138,11 +138,12 @@ namespace Encryption_C
             // получаем выбранный файл
             string filename = saveFileDialog1.FileName;
             // сохраняем текст в файл
-            
+
             System.IO.File.WriteAllText(filename, textBox4.Text);
             System.IO.File.WriteAllText(filename, "\n");
             System.IO.File.WriteAllText(filename, textBox5.Text);
             MessageBox.Show("Файл сохранен");
         }
+
     }
 }
